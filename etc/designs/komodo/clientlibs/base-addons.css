@@ -1,0 +1,971 @@
+.clearfix,
+.group,
+.result,
+.clear {
+  *zoom: 1;
+}
+.clearfix:before,
+.group:before,
+.result:before,
+.clear:before,
+.clearfix:after,
+.group:after,
+.result:after,
+.clear:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after,
+.group:after,
+.result:after,
+.clear:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 36px;
+}
+/* 
+Added by Joseph Serpa
+Custom mixin to get around the compliation error with the deafult navbar less file.
+http://www.tagwith.com/question_477890_less-v2-does-not-compile-twitters-bootstrap-2-x
+*/
+/* @group change country dialog */
+#countrySelectDialog {
+  background: #ffffff url(sharedstatic/img/countryselect-bg.jpg) left bottom no-repeat;
+  padding: 0px;
+  height: auto;
+}
+#countrySelectDialog .modal-body {
+  padding: 20px 20px 10px 170px;
+  max-height: none;
+}
+#countrySelectDialog h1 {
+  margin-bottom: 0;
+}
+#countrySelectDialog fieldset {
+  width: 100%;
+  margin: 0px auto;
+}
+#countrySelectDialog fieldset * {
+  vertical-align: middle;
+}
+#countrySelectDialog select {
+  border: 1px solid #797979;
+  width: 256px;
+  padding: 0;
+  margin: 0;
+}
+#countrySelectDialog .countryMessage {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+#countrySelectDialog ul {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+#countrySelectDialog .cookieMessage {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#countrySelectDialog .cookieMessage a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#countrySelectDialog .cookieMessage a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+#countrySelectGoButton {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+/* @end change country dialog */
+#b2bMasterDialog {
+  padding: 20px 20px 20px 20px;
+}
+#b2bMasterDialog .countryMessage {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  margin: -5px 0 0 0;
+  /* 30059 - Fixes buttons from being pushed down.. (morganm) */
+  font-size: 14px;
+  /* 30059 - Fixes buttons from being pushed down.. (morganm) */
+}
+#b2bMasterDialog br {
+  display: none;
+  /* 30059 - Fixes buttons from being pushed down.. (morganm) */
+}
+#b2bMasterDialog fieldset {
+  width: 100%;
+  margin: 0px auto;
+  text-align: center;
+}
+#b2bMasterDialog fieldset * {
+  vertical-align: middle;
+}
+/* @group content shared */
+.content {
+  padding-top: 10px;
+}
+/* @end content shared */
+/* @group content author styles */
+mark {
+  background-color: #FFFFAD;
+}
+.doc-icon,
+.pdf-icon,
+.txt-icon,
+.xls-icon,
+.link-word,
+.link-excel,
+.link-pdf,
+.pdf,
+.txt,
+.xls,
+.pdf-empty,
+.txt-empty,
+.xls-empty {
+  background-image: url(sharedstatic/img/sprites-icons-document-types-16px.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 20px;
+}
+.xls-icon,
+.link-excel,
+.xls,
+.xls-empty {
+  background-position: 0 0;
+}
+.pdf-icon,
+.link-pdf,
+.pdf,
+.pdf-empty {
+  background-position: 0 -116px;
+}
+.doc-icon,
+.link-word {
+  background-position: 0 -232px;
+}
+.txt-icon,
+.txt,
+.txt-empty {
+  background-position: 0 -348px;
+}
+.link-web,
+.icon.outbound {
+  background: url(sharedstatic/img/icon-outboundlink.gif) 100% 2px no-repeat;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 16px;
+}
+.document-list .icon.outbound,
+.link-web {
+  background-position: 1px 3px;
+  padding-right: 0;
+  padding-left: 20px;
+}
+ol .icon.outbound {
+  background-position: top right;
+  display: inline;
+}
+#main .document-list li,
+#right .document-list li {
+  display: list-item;
+}
+.document-list {
+  margin-left: 0;
+}
+.document-list > li {
+  list-style-type: none;
+}
+.cta-link,
+.link-cta a {
+  font-weight: bold;
+}
+.cta-link:after,
+.link-cta a:after {
+  content: "\203A";
+  padding-left: 4px;
+}
+.icon-doc,
+.icon-pdf,
+.icon-txt,
+.icon-xls {
+  background-image: url(sharedstatic/img/sprites-icons-document-types-16px.png);
+}
+.icon-doc,
+.icon-pdf,
+.icon-txt,
+.icon-xls {
+  margin-top: 0;
+  line-height: 16px;
+  height: 16px;
+}
+.icon-doc {
+  background-position: 0 -232px;
+}
+.icon-pdf {
+  background-position: 0 -116px;
+}
+.icon-txt {
+  background-position: 0 -348px;
+}
+.icon-xls {
+  background-position: 0 0;
+}
+.icon-outbound {
+  background-image: url(sharedstatic/img/icon-outboundlink.gif);
+  background-position: 0 0;
+}
+.figcaption {
+  color: #888;
+  font-size: 12px;
+}
+.img-border {
+  border: 1px solid #d8d8d8;
+}
+.img-left {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.img-right {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.figure.img-right img,
+.figure.img-right img {
+  float: none;
+  margin: 0;
+}
+.enlarge-image {
+  position: relative;
+}
+.enlarge-image span {
+  background: url(sharedstatic/img/enlarge-icon.gif);
+  display: none;
+  height: 22px;
+  position: absolute;
+  bottom: 10px;
+  left: 28%;
+  text-indent: -9999px;
+  width: 77px;
+  z-index: 2;
+}
+.enlarge-image:hover span {
+  display: block;
+}
+.toggle-view {
+  background: url(sharedstatic/img/sprites-icons-functional-16px.png) no-repeat;
+  display: inline-block;
+  padding: 2px 0 2px 20px;
+  margin-bottom: 20px;
+}
+.toggle-view.toggle-visible {
+  background-position: 0 -65px;
+}
+.toggle-view.toggle-hidden {
+  background-position: 0 -132px;
+}
+.productList,
+.selection-guide-table {
+  border: 1px solid #d8d8d8;
+  margin-bottom: 20px;
+}
+.table-column-dividers th,
+.table-column-dividers td {
+  border-right: 1px solid #d8d8d8;
+}
+.table-column-dividers th:last-of-type,
+.table-column-dividers td:last-of-type {
+  border-right: 0;
+}
+table.productList {
+  width: 100%;
+}
+.productList th {
+  text-align: left;
+}
+.productList th,
+.selection-guide-table th {
+  background: #f8f8f8;
+  padding: 8px;
+  vertical-align: bottom;
+}
+.productList td,
+.selection-guide-table td {
+  border-top: 1px solid #d8d8d8;
+  padding: 8px;
+}
+.valign-middle td {
+  vertical-align: middle;
+}
+.halign-center th,
+.halign-center td {
+  text-align: center;
+}
+.productList tbody tr:nth-of-type(odd) td {
+  background: #f8f8f8;
+}
+.productList .commerce-button {
+  float: right;
+}
+.productList input {
+  margin-bottom: 0;
+}
+.query5-table .productList {
+  border: none;
+  border-top: 1px solid #d8d8d8;
+  padding-bottom: 10px;
+}
+.query5-table .productList th {
+  border-top: 2px solid #fff;
+  border-bottom: 3px solid #d8d8d8;
+}
+.selection-guide-table {
+  border-collapse: separate;
+  border-spacing: 5px 5px;
+}
+.selection-guide-table th {
+  background: #EAF1F7;
+}
+.selection-guide-table td {
+  border: 0;
+}
+.selection-guide-table td ul {
+  margin-left: 16px;
+}
+.selection-guide-table tfoot td {
+  border-top: 1px dashed #d8d8d8;
+}
+.workflow-content td {
+  padding-right: 10px;
+}
+.workflow-image img {
+  border: 1px solid #aaa;
+}
+.workflow-aside {
+  float: left;
+  padding: 10px;
+  width: 180px;
+}
+.workflow-aside dl {
+  margin-bottom: 5px;
+}
+.workflow-aside dd {
+  margin-bottom: 3px;
+}
+/*b2b messages class. */
+.b2b-msg-wrapper {
+  background: #fff;
+  padding: 10px 0;
+  display: none;
+  margin-bottom: 20px;
+}
+.b2b-message {
+  margin-bottom: 10px;
+}
+.gform {
+  padding-top: 30px;
+}
+/* basic setup for all tables */
+table.rte-table tr td,
+table.rte-table tr th {
+  border: 1px solid #d8d8d8;
+  padding: 8px;
+  text-align: left;
+}
+/* header row is default to gradient. add rte-table-cvc to make it plain. */
+table.rte-table tr th {
+  background-color: #fbfbfb;
+  background-image: -moz-linear-gradient(top, #ffffff, #e8e8e8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e8e8e8));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e8e8e8);
+  background-image: -o-linear-gradient(top, #ffffff, #e8e8e8);
+  background-image: linear-gradient(to bottom, #ffffff, #e8e8e8);
+  background-repeat: repeat-x;
+  vertical-align: bottom;
+}
+/* cvc tables have a matte header, instead of default gradient */
+table.rte-table-cvc tr th {
+  background-color: #ddd;
+  background-image: none;
+}
+/* bold the th and clear gradient for the section header */
+table.rte-table th.rte-section-header {
+  font-weight: bold;
+  background: transparent;
+  background-image: none;
+}
+/* bold the th and clear gradient for the row header */
+table.rte-table th.rte-row-header {
+  font-weight: bold;
+  background: #f8f8f8;
+  background-image: none;
+}
+/* cvc tables have normal font weight for row-header */
+table.rte-table-cvc th.rte-row-header {
+  font-weight: normal;
+}
+/* one cell at a time; do not use with rte-table-striped */
+table.rte-table td.rte-table-stripe-row {
+  background-color: #f8f8f8;
+}
+/* 
+		sets an individual cell to highlighted
+		use button class when not highlighted: 	.btn-default
+		use button class when highlighted: 		.btn-primary
+	*/
+table.rte-table td.rte-highlighted {
+  background-color: #ebf2fa !important;
+}
+/* stripe all rows */
+table.rte-table-striped tr:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+table.rte-table-hover tbody tr:hover > th,
+table.rte-table-hover tbody tr:hover > td {
+  background-color: #f3f3f3;
+}
+/* style to support the cvc hover with a single row header*/
+table.rte-table-cvc tr:nth-child(1) {
+  background-color: #f8f8f8 !important;
+}
+/* style to support the cvc hover with a multi row header*/
+table.rte-table-cvc-multi-row-header tr:nth-child(1),
+table.rte-table-cvc-multi-row-header tr:nth-child(2),
+table.rte-table-cvc-multi-row-header tr:nth-child(3) {
+  background-color: #f8f8f8 !important;
+}
+/* styles to create a cvc multi row header*/
+table.rte-table-cvc-multi-row-header th.rte-row-header-top {
+  border-bottom: 0px solid;
+}
+table.rte-table-cvc-multi-row-header th.rte-row-header-middle {
+  border-top: 0px solid;
+  border-bottom: 0px solid;
+}
+table.rte-table-cvc-multi-row-header th.rte-row-header-bottom {
+  border-top: 0px solid;
+}
+table.rte-table .rte-icon {
+  text-align: center;
+  vertical-align: middle;
+}
+table.rte-table .icon-check {
+  background: url(base/img/icon-check.png) no-repeat 0 0;
+  text-indent: -9999px;
+  height: 25px;
+  width: 25px;
+}
+/*
+
+Full layout sample (one of several possible configuration)
+For more see https://confluence.amer.thermo.com/display/EFT/Catalog+Service+Integration
+
+<div class="price-group price-panda-called price-web-called"> 
+	<span class="price price-list price-empty">
+		<span class="price-amount">0.00</span>
+	</span>
+	<span class="price price-your">
+		<span class="price-link"><a>Request a Quote</a></span>
+	</span>
+	<span class="price price-web">
+		<span class="price-amount">100.00</span>
+		<span class="price-message">(ends August 26, 2021)</span>
+	</span>
+</div>
+
+*/
+.price-group .price:first-child {
+  margin-top: 0;
+}
+.price {
+  word-break: break-word;
+  white-space: normal;
+  display: block;
+  line-height: 16px;
+  margin-top: 10px;
+}
+.price .price-amount {
+  word-break: normal;
+  white-space: nowrap;
+}
+.price .price-currency {
+  text-transform: uppercase;
+}
+.price .price-message {
+  display: block;
+  color: #888;
+  font-style: italic;
+}
+.price-panda-called .price-list .price-amount,
+.price-panda-called .price-list .price-currency {
+  text-decoration: line-through;
+  color: #888;
+}
+.price-panda-called .price-list.price-empty .price-amount,
+.price-panda-called .price-list.price-empty .price-currency {
+  text-decoration: none;
+  color: #000000;
+}
+.price-web .price-amount {
+  font-weight: bold;
+}
+.price-web .price-amount,
+.price-your .price-amount {
+  text-decoration: none;
+  color: #7fba00;
+}
+.price-web-called .price-list .price-amount,
+.price-web-called .price-your .price-amount {
+  text-decoration: line-through;
+  color: #888;
+}
+.price-web-called .price-list.price-empty {
+  display: none;
+}
+.price-masked .price-amount {
+  color: #000000;
+  font-weight: normal;
+}
+.price-learn-where-to-buy .price-message {
+  color: #ee3134;
+}
+@media print {
+  body {
+    background: none;
+    color: black !important;
+    font-size: 11px;
+    margin: 0;
+    width: 970px !important;
+    padding-top: 10px !important;
+  }
+  a,
+  a * {
+    color: #036AC8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a img {
+    border: none;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+  h1,
+  .pageheader,
+  .button {
+    color: black;
+    margin-left: 0;
+    font-weight: bold;
+    float: none;
+  }
+  #kampylink,
+  #promoBar,
+  #messagingBar,
+  .notification-bar,
+  .search,
+  .utility,
+  .page-utility,
+  .secondary,
+  .sidebar,
+  .main-nav,
+  .meganav,
+  .support-search,
+  .results-sort,
+  .results-footer,
+  .pagination,
+  .stepbar,
+  .quickorder .tabs-menu,
+  .our-products,
+  #hfFooterGroupContents,
+  .footer-location,
+  .contentinfo-legal {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  .g720,
+  .g9,
+  .span9,
+  .g800,
+  .g10,
+  .span10,
+  .g880,
+  .g11,
+  .span11,
+  .g960,
+  .g12,
+  .span12,
+  .g720m20,
+  .g800m20,
+  .g880m20,
+  .g960m20 {
+    float: none !important;
+  }
+  .main,
+  .contents {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    float: none !important;
+    width: 100% !important;
+  }
+  .hidden-print {
+    display: none !important;
+  }
+  #user-utility-bar,
+  #messagingBar,
+  .global-commerce-bar-border,
+  #header-nav-container {
+    display: none !important;
+  }
+  .globalHeader {
+    margin-bottom: 60px;
+  }
+  .global-commerce-bar {
+    display: block;
+    position: absolute;
+    padding: 20px 0;
+    height: auto;
+  }
+  .global-commerce-bar .logo {
+    text-align: left !important;
+  }
+}
+
+/* Preload images */
+.image-enlarge,
+.image-enlarge-link:hover {
+  display: block;
+  /* This is the most cross-browser we're going to get... */
+  cursor: zoom-in;
+  /* MODERN */
+  cursor: zoom-in, pointer;
+  /* IE - Supports the pointer fallback. Chrome rejects this rule as invalid.. */
+}
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: white;
+  display: none;
+  opacity: 0.90;
+}
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+  background-color: white;
+}
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.lightbox a img {
+  border: none;
+}
+.lb-image,
+.lb-dataContainer {
+  position: relative;
+  z-index: 10;
+}
+.lb-thumbContainer {
+  height: inherit;
+  max-width: 300px;
+}
+.lb-thumbColumn {
+  float: left;
+  width: 60px;
+}
+.lb-thumb {
+  max-width: 50px;
+  max-height: 50px;
+  margin: 0 10px 10px 0;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.lb-thumbContainer .active,
+.lb-thumb:hover {
+  border: 2px solid black;
+  opacity: 1;
+}
+.lb-outerContainer,
+.lb-dataContainer {
+  background-color: white;
+  min-height: 200px;
+  min-width: 200px;
+}
+.lb-image {
+  margin: 0 auto;
+}
+.lb-caption {
+  display: none !important;
+}
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  max-width: 80%;
+}
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.lb-closeContainer {
+  margin-bottom: 5px;
+  height: 30px;
+}
+.lb-headline {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  margin: 10px auto;
+  text-align: left;
+}
+.lb-container {
+  padding: 4px;
+}
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+.lb-nav {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.lb-container > .nav {
+  left: 0;
+}
+.lb-nav a {
+  outline: none;
+}
+.lb-prev,
+.lb-next {
+  height: 45px;
+  width: 55px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /*-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0, M21=0, M22=1, SizingMethod='auto expand')";*/
+}
+.lb-prev,
+.lb-next {
+  cursor: pointer;
+}
+.lb-next {
+  background: url(base-addons/img/next.png) center no-repeat;
+  right: -60px;
+}
+.lb-prev {
+  background: url(base-addons/img/prev.png) center no-repeat;
+  left: -60px;
+}
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.lb-data {
+  padding: 0 4px;
+  color: #000;
+}
+.lb-data .lb-details {
+  text-align: justify;
+  line-height: 1.1em;
+}
+.lb-data .lb-caption {
+  font-size: 13px;
+  line-height: 18px;
+}
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+}
+.lb-close {
+  display: block;
+  float: right;
+  /*background: url(base-addons/css/addons/img/close.png) top right no-repeat;*/
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  font-size: 50px;
+  line-height: 40px;
+  color: #333;
+}
+.lb-close:link {
+  color: #333;
+}
+.lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  #lightbox {
+    overflow: hidden;
+  }
+  .lb-image {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .lb-dataContainer {
+    max-width: 80%;
+  }
+  .lb-thumbContainer {
+    display: none;
+  }
+}
+
+.textimage {
+  margin-bottom: 20px;
+}
+.textimage .text {
+  overflow: visible;
+  zoom: 1;
+}
+div.textimage div.image {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+div.textimage div.image img {
+  max-width: 100%;
+}
+div.textimage div.image .image-fit-wrap {
+  display: none;
+}
+.textimage.textimage-right .image {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+.textimage.textimage-left .text ul {
+  list-style-position: inside;
+}
+.textimage.textimage-top .image {
+  float: none;
+}
+.well div.textimage {
+  margin-bottom: 0;
+}
+.well div.textimage div.image {
+  margin-bottom: 0;
+}
+.textimage-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.textimage-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .textimage .text {
+    overflow: visible;
+    zoom: 1;
+    float: left;
+  }
+  div.textimage div.image,
+  .textimage.textimage-right .image {
+    float: none;
+    margin: 10px auto;
+  }
+  div.textimage div.image img,
+  .textimage.textimage-right .image img {
+    margin: auto;
+  }
+}
+
+.image-contain {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.image-cover {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.image-fit-wrap {
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  -ms-background-position-y: center;
+  -ms-background-position-x: center;
+}
+

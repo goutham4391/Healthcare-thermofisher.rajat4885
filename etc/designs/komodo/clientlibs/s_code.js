@@ -1,0 +1,1 @@
+(function(){function logDeprecated(name){console.log("******** DEPRECATED "+name+" ********")}window.s={enabled:false,t:function(){logDeprecated("s.t")},tl:function(){logDeprecated("s.tl")},c_r:function(){logDeprecated("s.c_r")},registerPostTrackCallback:function(){logDeprecated("s.registerPostTrackCallback")}}})();
